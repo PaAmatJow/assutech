@@ -1,7 +1,9 @@
 import React, {useState, useEffect} from 'react'
 import { FaAngleRight, FaAngleLeft, FaQuoteRight } from 'react-icons/fa';
 import data from '../data'
+// animation
 import {motion} from 'framer-motion'
+import {scrollAnim} from '../animation/animation'
 
 const Testimonials = () => {
   const [people ,setPeople] = useState(data);
@@ -25,16 +27,21 @@ const Testimonials = () => {
   }, [index]);
 
   return (
-		<>
-			<div className='py-6 text-center font-sans w-[90vw] my-[5rem] mx-auto max-w-[1170px] lg:w-[95vw]'>
+		<motion.div
+			transition={{ staggerChildren: 0.25 }}
+			initial='hidden'
+			whileInView='show'
+			viewport={{ once: true, amount: 0.4 }}
+		>
+			<motion.div variants={scrollAnim} className='py-6 text-center font-sans w-[90vw] my-[5rem] mx-auto max-w-[1170px] lg:w-[95vw]'>
 				<h3 className='text-lg text-[#850400] font-semibold'>
 					DON’T JUST TAKE OUR WORD FOR IT
 				</h3>
 				<h2 className='text-2xl font-semibold'>
 					Take it from clients that trust our work and commitment to deliver.
 				</h2>
-			</div>
-			<div  className='mx-auto my-[2rem] w-[90vw] h-[600px] max-w-[800px] text-center relative flex overflow-hidden '>
+			</motion.div>
+			<div className='mx-auto my-[2rem] w-[90vw] h-[600px] max-w-[800px] text-center relative flex overflow-hidden '>
 				{people.map((person, personIndex) => {
 					const { id, image, name, title, quote } = person;
 
@@ -79,7 +86,7 @@ const Testimonials = () => {
 					<FaAngleRight className='opacity-50 text-[1.9rem]' />
 				</button>
 			</div>
-		</>
+		</motion.div>
 	);
 }
 

@@ -4,22 +4,31 @@ import ai from '../img/ai-icon.webp';
 import web from '../img/web.webp';
 import business from '../img/business.webp';
 import growth from '../img/growth.webp';
+// animation
+import {motion} from 'framer-motion'
+import {scrollAnim} from '../animation/animation'
 
 const Services = () => {
 	return (
 		<div className='bg-gray-100 '>
-			<div className='px-[2rem] py-[2rem] md:px-[4rem] md:py-[2rem]  lg:px-[2rem] lg:py-[4rem]'>
+			<motion.div
+				transition={{staggerChildren:0.25}}
+				initial='hidden'
+				whileInView='show'
+				viewport={{ once: true, amount: 0.4 }}
+				className='px-[2rem] py-[2rem] md:px-[4rem] md:py-[2rem]  lg:px-[2rem] lg:py-[4rem]'
+			>
 				{/* title */}
 				<div className='py-6 text-center font-sans'>
-					<h3 className='text-lg text-[#850400] font-semibold'>
+					<motion.h3 variants={scrollAnim} className='text-lg text-[#850400] font-semibold'>
 						Custom Solutions for You.
-					</h3>
-					<h2 className='text-2xl font-semibold'>
+					</motion.h3>
+					<motion.h2 variants={scrollAnim} className='text-2xl font-semibold'>
 						Works Everywhere on Any Device.
-					</h2>
+					</motion.h2>
 				</div>
 				{/* cards container */}
-				<div className='flex flex-wrap gap-6 justify-center max-w-[1000px] my-[2rem] mx-auto'>
+				<motion.div variants={scrollAnim} className='flex flex-wrap gap-6 justify-center max-w-[1000px] my-[2rem] mx-auto'>
 					{/* single card */}
 					<div className='bg-white rounded-md shadow-sm max-w-[22rem] max-h-[16rem] p-4 '>
 						<div className='flex flex-col items-center space-y-4'>
@@ -98,8 +107,8 @@ const Services = () => {
 						</div>
 					</div>
 					{/* end of single card */}
-				</div>
-			</div>
+				</motion.div>
+			</motion.div>
 		</div>
 	);
 };

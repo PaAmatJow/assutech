@@ -2,11 +2,20 @@ import React from 'react';
 import blog1 from '../img/blog-1.webp';
 import blog2 from '../img/blog-2.webp';
 import blog3 from '../img/blog-3.webp';
+// animation
+import {motion} from 'framer-motion'
+import {scrollAnim} from '../animation/animation'
 
 const Blogs = () => {
 	return (
-		<div className=' font-sans w-[100%] mx-auto py-[2rem] bg-gray-100'>
-			<div className='py-6 text-center font-sans w-[90vw]  mx-auto max-w-[1170px] lg:w-[95vw] my-[2rem]'>
+		<motion.div
+			transition={{ staggerChildren: 0.25 }}
+			initial='hidden'
+			whileInView='show'
+			viewport={{ once: true, amount: 0.2 }}
+			className=' font-sans w-[100%] mx-auto py-[2rem] bg-gray-100'
+		>
+			<motion.div variants={scrollAnim} className='py-6 text-center font-sans w-[90vw]  mx-auto max-w-[1170px] lg:w-[95vw] my-[2rem]'>
 				<h3 className='text-lg text-[#850400] font-semibold mb-[1rem]'>
 					TECH TALKS
 				</h3>
@@ -16,9 +25,9 @@ const Blogs = () => {
 				<button className='text-[1.2rem] text-white font-sans bg-[#850400] px-6 py-3 font-semibold tracking-wider'>
 					EXPLORE ALL
 				</button>
-			</div>
+			</motion.div>
 			{/* cards */}
-			<div className='flex flex-wrap gap-6 my-[4rem] mx-auto px-[4rem] py-[2rem] max-w-[1440px] justify-center'>
+			<motion.div variants={scrollAnim} className='flex flex-wrap gap-6 my-[4rem] mx-auto px-[4rem] py-[2rem] max-w-[1440px] justify-center'>
 				{/* single card */}
 				<div className='max-w-[22rem]  min-w-[20rem] max-h-[28rem] shadow-md rounded-md bg-white'>
 					<div className='h-[40%] w-full'>
@@ -100,8 +109,8 @@ const Blogs = () => {
 					</div>
 				</div>
 				{/* end of single card */}
-			</div>
-		</div>
+			</motion.div>
+		</motion.div>
 	);
 };
 

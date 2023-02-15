@@ -1,13 +1,21 @@
 import React from 'react'
 import waychit from '../img/waychit.webp'
 import marble from '../img/marble.webp'
+// animation
+import {motion} from 'framer-motion'
+import {scrollAnim} from '../animation/animation'
 
 const Products = () => {
   return (
 		<div>
-			<div className='px-[2rem] py-[1rem] md:px-[4rem] md:py-[2rem]  lg:px-[10rem] lg:py-[4rem] my-[2rem] flex flex-col items-center space-y-4 xl:flex-row lg:justify-between max-w-[1650px] mx-auto'>
+			<motion.div
+				initial='hidden'
+				whileInView='show'
+				viewport={{ once: true, amount: 0.4 }}
+				className='px-[2rem] py-[1rem] md:px-[4rem] md:py-[2rem]  lg:px-[10rem] lg:py-[4rem] my-[2rem] flex flex-col items-center space-y-4 xl:flex-row lg:justify-between max-w-[1650px] mx-auto'
+			>
 				{/* left */}
-				<div className='text-center xl:text-start font-sans p-6 flex flex-col items-center lg:items-start space-y-4 w-[22rem] lg:w-[32rem]'>
+				<motion.div variants={scrollAnim} className='text-center xl:text-start font-sans p-6 flex flex-col items-center lg:items-start space-y-4 w-[22rem] lg:w-[32rem]'>
 					<h3 className='text-lg text-[#850400] font-semibold w-full'>
 						RECENT PRODUCTS
 					</h3>
@@ -18,15 +26,14 @@ const Products = () => {
 						At Assutech, We Focus on People and Results. Our Teams Work Directly
 						with Customers for Fast and Efficient Solutions.
 					</p>
-					<div className="w-full">
+					<div className='w-full'>
 						<button className=' text-[1.2rem] text-white font-sans bg-[#850400] px-6 py-3 font-semibold tracking-wider'>
-						GET STARTED
-					</button>
+							GET STARTED
+						</button>
 					</div>
-					
-				</div>
+				</motion.div>
 				{/* right */}
-				<div className='flex flex-col items-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4 2xl:space-x-10'>
+				<motion.div variants={scrollAnim} className='flex flex-col items-center space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4 2xl:space-x-10'>
 					{/* single card */}
 					<div className='bg-white rounded-md shadow-lg w-[22rem] h-[24rem] px-2 py-4 '>
 						<div className='flex flex-col items-center space-y-4'>
@@ -60,8 +67,8 @@ const Products = () => {
 						</div>
 					</div>
 					{/* end of single card */}
-				</div>
-			</div>
+				</motion.div>
+			</motion.div>
 		</div>
 	);
 }

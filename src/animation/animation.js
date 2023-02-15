@@ -78,17 +78,17 @@ export const photoAnim = {
 	},
 };
 
-// export const heroAnim = {
-//   hidden: {
-//     y:200
-//   },
-//   show:{
-//     y:0,
-//     transition: {
-//       duration: 1,
-//       when: 'beforeChildren',
-//       staggerChildren: 0.5,
-//     }
-//   }
-
-// }
+export const scrollAnim = {
+  hidden: {
+    y: '50px',
+    opacity:0,
+  },
+  show: {
+    y: 0,
+    opacity:1,
+    transition: {
+      duration: 0.75,
+      ease: 'easeOut'
+    }
+}
+}
