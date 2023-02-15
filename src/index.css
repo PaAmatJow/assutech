@@ -42,3 +42,20 @@ article.nextSlide {
   background-position: center;
   background-size: cover;
 }
+
+.open {
+  position: fixed;
+	z-index: 1000;
+	background: white;
+	top: 10vh;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	box-shadow: 2px 0 2px rgba(0, 0, 0, 0.2);
+	transition: all 0.2s ease-in-out;
+}
+
+.closed {
+  transform: translateY(-100%);
+  display: none;
+}
