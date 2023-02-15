@@ -12,12 +12,13 @@ import { heroTitleAnim, fade, photoAnim } from '../animation/animation';
 
 const Hero = () => {
 	return (
-		<div className=' hero px-[2rem] py-[1rem] md:px-[4rem] md:py-[2rem]  lg:px-[10rem] lg:py-[2rem] font-sans w-[90vw] mx-auto  lg:w-[95vw] lg:min-h-[70vh] xl:min-h-[90vh]  '>
-			<div className='flex items-center h-full justify-between mx-auto max-w-[1440px]'>
-				<div className='text-[3rem] lg:text-[4rem] md:pr-4 z-30'>
+		<div className=' hero px-[2rem] md:px-[4rem] lg:px-[10rem] py-[6rem] font-sans  mx-auto   lg:min-h-[60vh] xl:min-h-[90vh]  '>
+			<div className='flex items-center h-[60vh] justify-center lg:justify-between mx-auto max-w-[1440px]'>
+				<div className='text-[2rem] md:text-[3rem] 2xl:text-[4rem] text-center md:text-start md:pr-4 z-30'>
 					<div className='overflow-hidden '>
 						<motion.h2 variants={heroTitleAnim} initial='hidden' animate='show'>
-							Software <span className='text-[#850400] font-semibold'>solutions</span>
+							Software{' '}
+							<span className='text-[#850400] font-semibold'>solutions</span>
 						</motion.h2>
 					</div>
 					<div className='overflow-hidden'>
@@ -42,7 +43,7 @@ const Hero = () => {
 						START NOW
 					</motion.button>
 				</div>
-				<div className='hidden xl:block w-[50%] z-30'>
+				<div className='hidden md:block w-[50%] z-30'>
 					{/* <motion.img
 						variants={photoAnim}
 						initial='hidden'

@@ -20,25 +20,25 @@ const Nav = () => {
 				<ul className='flex items-center hidden md:flex'>
 					<div className='group'>
 						<li className='pl-6 font-mono font-semibold text-lg tracking-wider'>
-							Home
+							<a href='#'>Home</a>
 						</li>
 						<div className='ml-6 mt-1 border-b-2 border-black opacity-0 group-hover:opacity-100 duration-500'></div>
 					</div>
 					<div className='group'>
 						<li className='pl-6 font-mono font-semibold text-lg tracking-wider'>
-							Blog
+							<a href='#'>Blog</a>
 						</li>
 						<div className='ml-6 mt-1 border-b-2 border-black opacity-0 group-hover:opacity-100 duration-500'></div>
 					</div>
 					<div className='group'>
 						<li className='pl-6 font-mono font-semibold text-lg tracking-wider'>
-							Team
+							<a href='#'>Team</a>
 						</li>
 						<div className='ml-6 mt-1 border-b-2 border-black opacity-0 group-hover:opacity-100 duration-500'></div>
 					</div>
 					<div className='group'>
 						<li className='pl-6 font-mono font-semibold text-lg tracking-wider'>
-							Contact
+							<a href='#'>Contact</a>
 						</li>
 						<div className='ml-6 mt-1 border-b-2 border-black opacity-0 group-hover:opacity-100 duration-500'></div>
 					</div>
