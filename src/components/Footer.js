@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from '../img/logo-2.png';
 import {FaTwitter, FaFacebookF, FaLinkedinIn} from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
 	return (
@@ -28,15 +29,29 @@ const Footer = () => {
 						<h2 className='font-sans font-semibold text-lg'>EXPLORE</h2>
 						<div className='flex justify-between'>
 							<ul className='w-1/2'>
-								<li>Home</li>
-								<li>Blog</li>
-								<li>Team</li>
-								<li>Go Digital</li>
+								<li className='hover:text-slate-400 transition-all duration-200'>
+									<Link to='/'>Home</Link>
+								</li>
+								<li className='hover:text-slate-400 transition-all duration-200'>
+									<Link to='blog'>Blog</Link>
+								</li>
+								<li className='hover:text-slate-400 transition-all duration-200'>
+									<Link to='team'>Team</Link>
+								</li>
+								<li className='hover:text-slate-400 transition-all duration-200'>
+									<a href='#'>Go Digital</a>{' '}
+								</li>
 							</ul>
 							<ul className='w-1/2'>
-								<li>Join Assutech</li>
-								<li>Internships</li>
-								<li>Contact Us</li>
+								<li className='hover:text-slate-400 transition-all duration-200'>
+									<a href='#'>Join Assutech</a>
+								</li>
+								<li className='hover:text-slate-400 transition-all duration-200'>
+									<a href='#'>Internships</a>
+								</li>
+								<li className='hover:text-slate-400 transition-all duration-200'>
+									<a href='#'>Contact Us</a>
+								</li>
 							</ul>
 						</div>
 					</div>
@@ -44,23 +59,23 @@ const Footer = () => {
 					<div className='xl:w-[33.33%] pr-6 space-y-4'>
 						<h2 className='font-sans font-semibold text-lg'>REACH US</h2>
 						<div className='flex flex-col'>
-							<a href='#'>7 - 8 Madiba Mall</a>
-							<a href='#'>Brufut Gardens Estate</a>
-							<a href='#'>The Gambia, West Africa</a>
+							<a href='#' className='hover:text-slate-400 transition-all duration-200'>7 - 8 Madiba Mall</a>
+							<a href='#' className='hover:text-slate-400 transition-all duration-200'>Brufut Gardens Estate</a>
+							<a href='#' className='hover:text-slate-400 transition-all duration-200'>The Gambia, West Africa</a>
 						</div>
 						<p>
-							<a href='tel:+220 3814760'>+220 3814760</a> |{' '}
-							<a href='mailto:info@assutech.gm'>info@assutech.gm</a>
+							<a href='tel:+220 3814760' className='hover:text-slate-400 transition-all duration-200'>+220 3814760</a> |{' '}
+							<a href='mailto:info@assutech.gm' className='hover:text-slate-400 transition-all duration-200'>info@assutech.gm</a>
 						</p>
 						<div className='flex space-x-4'>
 							<a href='#'>
-								<FaTwitter className='text-[1.5rem]' />
+								<FaTwitter className='text-[1.5rem] hover:text-slate-400 hover:scale-105 transition-all duraton-200' />
 							</a>
 							<a href='#'>
-								<FaFacebookF className='text-[1.5rem]' />
+								<FaFacebookF className='text-[1.5rem] hover:text-slate-400 hover:scale-105 transition-all duraton-200' />
 							</a>
 							<a href='#'>
-								<FaLinkedinIn className='text-[1.5rem]' />
+								<FaLinkedinIn className='text-[1.5rem] hover:text-slate-400 hover:scale-105 transition-all duraton-200' />
 							</a>
 						</div>
 					</div>

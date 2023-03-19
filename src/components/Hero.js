@@ -38,7 +38,7 @@ const Hero = () => {
 						animate='show'
 						whileHover={{ scale: 1.05 }}
 						whileTap={{ scale: 1 }}
-						className='text-[1.2rem] text-white font-sans bg-[#850400] px-6 py-3 font-semibold tracking-wider'
+						className='text-[1.2rem] text-white font-sans bg-[#850400] px-6 py-3  font-semibold tracking-wider'
 					>
 						START NOW
 					</motion.button>
