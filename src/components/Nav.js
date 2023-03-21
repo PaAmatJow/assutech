@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import logo from '../img/logo-2.png'
 import '../index.css'
-import { FiMenu } from 'react-icons/fi';
+import { FiMenu, FiX } from 'react-icons/fi';
 import {Link} from 'react-router-dom'
 
 import {motion} from 'framer-motion'
@@ -29,8 +29,11 @@ const Nav = () => {
 				</Link>
 				{/* burger button */}
 				<div className='md:hidden'>
-					<button className='p-2' onClick={() => setIsOpen(!isOpen)}>
-						<FiMenu />
+					<button
+						className='p-2 text-xl transition-all duration-200'
+						onClick={() => setIsOpen(!isOpen)}
+					>
+						{isOpen ? <FiX className='text-[#990601]' /> : <FiMenu />}
 					</button>
 				</div>
 				{/* desktop menu */}
@@ -63,28 +66,36 @@ const Nav = () => {
 			</div>
 			{/* mobile menu */}
 			<div className={state}>
-				<ul className='flex flex-col items-center space-y-10 my-10 font-sans font-semibold text-lg tracking-wider'>
+				<ul className='flex flex-col space-y-14 my-10 font-sans font-semibold text-2xl text-center tracking-[0.01rem]'>
 					<div className='group'>
 						<li className='pl-6 '>
-							<Link to='/'>Home</Link>
+							<Link to='/' onClick={() => setIsOpen(false)}>
+								Home
+							</Link>
 						</li>
 						<div className='ml-6 mt-1 border-b-2 border-black opacity-0 group-hover:opacity-100 duration-500'></div>
 					</div>
 					<div className='group'>
 						<li className='pl-6 '>
-							<Link to='blog'>Blog</Link>
+							<Link to='blog' onClick={() => setIsOpen(false)}>
+								Blog
+							</Link>
 						</li>
 						<div className='ml-6 mt-1 border-b-2 border-black opacity-0 group-hover:opacity-100 duration-500'></div>
 					</div>
 					<div className='group'>
 						<li className='pl-6 '>
-							<Link to='team'>Team</Link>
+							<Link to='team' onClick={() => setIsOpen(false)}>
+								Team
+							</Link>
 						</li>
 						<div className='ml-6 mt-1 border-b-2 border-black opacity-0 group-hover:opacity-100 duration-500'></div>
 					</div>
 					<div className='group'>
 						<li className='pl-6 '>
-							<Link to='contact'>Contact</Link>
+							<Link to='contact' onClick={() => setIsOpen(false)}>
+								Contact
+							</Link>
 						</li>
 						<div className='ml-6 mt-1 border-b-2 border-black opacity-0 group-hover:opacity-100 duration-500'></div>
 					</div>
